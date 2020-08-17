@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+</head>
+<body>
+<form method="post" th:action="@{/orders}" th:object="${order}">
+    <h1>选择你的配货地址</h1>
+
+    <a th:href="@{/design}" id="another">选择其他Taco</a><br>
+
+    <div th:if="${#fields.hasErrors()}">
+        <span>
+            请修改后重新提交
+        </span>
+    </div>
+    <h3>下面输入信息</h3>
+    <label for="name">Name: </label>
+    <input id="name" type="text" th:field="*{name}">
+    <input type="submit" value="提交订单"/>
+</form>
+
+</body>
+</html>

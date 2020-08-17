@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+</head>
+<body>
+<h1>Design your taco</h1>
+<!--    th:object可以注入后端model传来的对象-->
+<form method="post" th:object="${design}">
+
+    <div th:if="${#fields.hasErrors()}">
+        <span>请重新提交表单</span>
+    </div>
+    <div class="calendar-grid">
+        <div id="wraps">
+            <h3>Designate your wrap:</h3>
+            <div th:each="ingredient : ${wrap}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+        <div id="proteins">
+            <h3>Pick your protein</h3>
+            <div th:each="ingredient : ${protein}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id }"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span>
+            </div>
+        </div>
+
+        <div id="cheeses">
+            <h3>Choose your cheese:</h3>
+            <div th:each="ingredient:${cheese}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span>
+            </div>
+        </div>
+
+        <div id="veggies">
+            <h3>Determine your veggies:</h3>
+            <div th:each="ingredient:${veggies}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span>
+            </div>
+        </div>
+
+        <div id="sauces">
+            <h3>Select your sauce:</h3>
+            <div th:each="ingredient:${sauce}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>给你的Taco起个名字吧</h3>
+        <input type="text" th:field="*{name}"/>
+    </div>
+    <button>提交你的Taco</button>
+</form>
+
+</body>
+</html>
