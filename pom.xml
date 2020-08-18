@@ -78,6 +78,12 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.0.16.Final</version>
         </dependency>
+
+        <!--Spring安全配置-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
