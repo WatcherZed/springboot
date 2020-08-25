@@ -1,7 +1,9 @@
 package com.example.demo.test.controller;
 
 import com.example.demo.test.data.Order;
+import com.example.demo.test.service.OrderMessagingService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/orders")
 public class OrderController {
 
+    @Autowired
+    OrderMessagingService orderMessagingService;
+
     @GetMapping("/current")
     public String orderForm(Model model) {
         model.addAttribute("order", new Order());
@@ -26,7 +31,13 @@ public class OrderController {
 
     @PostMapping
     public String processOrder(Order order) {
-        log.info("Order submitted: " + order);
         return "redirect:/";
+    }
+    @GetMapping("/testJms")
+    public void testJms(){
+        Order order = new Order();
+        order.setName("刘永康");
+        order.setCity("济南");
+        orderMessagingService.sendOrder(order);
     }
 }
