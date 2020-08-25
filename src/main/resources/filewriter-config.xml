@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:int-file="http://www.springframework.org/schema/integration/file"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration.xsd http://www.springframework.org/schema/integration/file https://www.springframework.org/schema/integration/file/spring-integration-file.xsd">
+<!--    声明textInChannel网关-->
+    <int:channel id="textInChannel"/>
+
+    <int:transformer id="upperCase"
+                     input-channel="textInChannel"
+                     output-channel="fileWriterChannel"
+                     expression="payload.toUpperCase()"/><!-- 转换文本  -->
+
+    <int:channel id="fileWriterChannel"/>
+
+    <int-file:outbound-channel-adapter id="writer"
+                                       channel="fileWriterChannel"
+                                       directory="/com/example/demo/test/sia5/files"
+                                       mode="APPEND"
+                                       append-new-line="true"/>
+</beans>
