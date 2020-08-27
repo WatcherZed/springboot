@@ -5,19 +5,24 @@ import com.example.demo.test.service.OrderMessagingService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
 @RunWith(SpringRunner.class)
 public class SpringbootApplicationTests {
     @Autowired
-    OrderMessagingService orderMessagingService;
+    private OrderMessagingService orderMessagingService;
 
     @Test
     public void testJms(){
         orderMessagingService.sendOrder(new Order());
     }
 
+    @Override
+    public String toString() {
+        return "这是一个测试类";
+    }
 
 
 //    @Bean

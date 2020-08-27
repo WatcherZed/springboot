@@ -1,13 +1,17 @@
 package com.example.demo;
 
-import com.example.demo.test.service.Intervice;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
+
+
+@RunWith(SpringRunner.class)
 public class Test {
-    @Autowired
-    private SpringbootApplicationTests springbootApplicationTests;
 
+    private static SpringbootApplicationTests springbootApplicationTests = new SpringbootApplicationTests();
 
-    public static void main(String[] args) {
+    @org.junit.Test
+    public void test(){
+        System.out.println(springbootApplicationTests.toString());
     }
 }

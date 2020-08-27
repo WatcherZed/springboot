@@ -121,6 +121,13 @@
             <artifactId>spring-integration-file</artifactId>
         </dependency>
 
+        <!--Spring的执行机构-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
