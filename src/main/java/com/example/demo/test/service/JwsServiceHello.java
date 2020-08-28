@@ -3,22 +3,22 @@ package com.example.demo.test.service;
 import javax.jws.WebService;
 import javax.xml.ws.Endpoint;
 /**
- * @ Description   :  web Serviceåè®®æœåŠ¡ç«¯
+ * @ Description   :  web ServiceĞ­Òé·şÎñ¶Ë
  * @ Author        :  lyk
  * @ CreateDate    :  2020/8/22 16:36
  * @ UpdateUser    :  lyk
  * @ UpdateDate    :  2020/8/22 16:36
- * @ UpdateRemark  :  ä¿®æ”¹å†…å®¹
+ * @ UpdateRemark  :  ĞŞ¸ÄÄÚÈİ
  * @ Version       :  1.0
  */
 @WebService
 public class JwsServiceHello {
 
     /*
-    ä¾›å®¢æˆ·ç«¯è°ƒç”¨çš„æ–¹æ³•ï¼Œè¯¥æ–¹æ³•æ˜¯éé™æ€çš„ï¼Œä¼šè¢«å‘å¸ƒ
+    ¹©¿Í»§¶Ëµ÷ÓÃµÄ·½·¨£¬¸Ã·½·¨ÊÇ·Ç¾²Ì¬µÄ£¬»á±»·¢²¼
      */
     public String getValue(String name) {
-        name = name + "æ–¹æ³•è°ƒç”¨æµ‹è¯•";
+        name = name + "·½·¨µ÷ÓÃ²âÊÔ";
         return name;
     }
 
@@ -29,6 +29,6 @@ public class JwsServiceHello {
 
     public static void main(String[] args) {
         Endpoint.publish("http://127.0.0.1:8080/WebServiceTest", new JwsServiceHello());
-        System.out.println("å‘å¸ƒæˆåŠŸ");
+        System.out.println("·¢²¼³É¹¦");
     }
 }
