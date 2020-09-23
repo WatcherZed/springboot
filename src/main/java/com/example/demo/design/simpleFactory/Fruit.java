@@ -1,17 +1,17 @@
 package com.example.demo.design.simpleFactory;
 /**
- * @ Description   :  Ë®¹ûÀà,¸ºÔğÉú²ú³öË®¹ûµÄ¹²ÓĞ·½·¨,Éè¶¨Ã¿¸öË®¹ûµ¥¶ÀÓµÓĞµÄ³éÏó·½·¨£¬ÈÃÃ¿¸öË®¹ûµ¥¶ÀÊµÏÖ
+ * @ Description   :  æ°´æœç±»,è´Ÿè´£ç”Ÿäº§å‡ºæ°´æœçš„å…±æœ‰æ–¹æ³•,è®¾å®šæ¯ä¸ªæ°´æœå•ç‹¬æ‹¥æœ‰çš„æŠ½è±¡æ–¹æ³•ï¼Œè®©æ¯ä¸ªæ°´æœå•ç‹¬å®ç°
  * @ Author        :  lyk
  * @ CreateDate    :  2020/9/22 11:16
  * @ UpdateUser    :  lyk
  * @ UpdateDate    :  2020/9/22 11:16
- * @ UpdateRemark  :  ĞŞ¸ÄÄÚÈİ
+ * @ UpdateRemark  :  ä¿®æ”¹å†…å®¹
  * @ Version       :  1.0
  */
 public abstract class Fruit {
 
     /**
-     * @Description  :Ë®¹ûÀàµÄ¹²ÓĞ·½·¨
+     * @Description  :æ°´æœç±»çš„å…±æœ‰æ–¹æ³•
      * @author       : lyk
      * @param        :
      * @return       :
@@ -19,11 +19,11 @@ public abstract class Fruit {
      * @date         : 2020/9/22 11:21
      */
     public void publicMethod(){
-        System.out.println("Ë®¹û¶¼¿ÉÒÔ³Ô!");
+        System.out.println("æ°´æœéƒ½å¯ä»¥åƒ!");
     }
 
     /**
-     * @Description  :Ã¿¸ö¾ßÌåË®¹ûµÄ¶ÀÓĞ·½·¨
+     * @Description  :æ¯ä¸ªå…·ä½“æ°´æœçš„ç‹¬æœ‰æ–¹æ³•
      * @author       : lyk
      * @param        :
      * @return       :

@@ -3,9 +3,9 @@ package com.example.demo.design.simpleFactory.nvwaperson;
 public class Women extends Person {
     @Override
     public void getPerson() {
-        System.out.println("ÕâÊÇÒ»¸öÅ®ÈË");
+        System.out.println("è¿™æ˜¯ä¸€ä¸ªå¥³äºº");
     }
     public void women(){
-        System.out.println("ÕâÊÇÅ®ÈË¶ÀÓĞµÄ·½·¨");
+        System.out.println("è¿™æ˜¯å¥³äººç‹¬æœ‰çš„æ–¹æ³•");
     }
 }

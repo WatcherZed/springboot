@@ -3,9 +3,9 @@ package com.example.demo.design.simpleFactory.nvwaperson;
 public class Robot extends Person {
     @Override
     public void getPerson() {
-        System.out.println("这是一个机器人");
+        System.out.println("杩欐槸涓�涓満鍣ㄤ汉");
     }
     public void robot(){
-        System.out.println("这是机器人独有的方法");
+        System.out.println("杩欐槸鏈哄櫒浜虹嫭鏈夌殑鏂规硶");
     }
 }

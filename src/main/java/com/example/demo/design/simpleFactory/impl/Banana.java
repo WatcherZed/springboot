@@ -5,6 +5,6 @@ import com.example.demo.design.simpleFactory.Fruit;
 public class Banana extends Fruit {
     @Override
     public void privateMethod() {
-        System.out.println("Ïã½¶ÊÇ»ÆÉ«µÄ!");
+        System.out.println("é¦™è•‰æ˜¯é»„è‰²çš„!");
     }
 }
