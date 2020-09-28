@@ -13,6 +13,6 @@ public class TimerTest {
             public void run() {
                 System.out.println("TimerTask" + new Date());
             }
-        }, 0,5000);
+        }, 0,1000);
     }
 }

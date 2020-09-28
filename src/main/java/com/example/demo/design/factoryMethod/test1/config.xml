@@ -1,6 +1,4 @@
 <?xml version="1.0" ?>
 <config>
     <className>com.example.demo.design.factoryMethod.test1.BMWFactory</className>
-    <className>com.example.demo.design.factoryMethod.test1.BenzFactory</className>
-
 </config>
