@@ -6,8 +6,8 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+//@ImportResource("classpath:/filewriter-config.xml")//以XML形式配置Spring集成流
 @SpringBootApplication
-@ImportResource("classpath:/filewriter-config.xml")//以XML形式配置Spring集成流
 public class SpringbootApplication implements WebMvcConfigurer {
 
     public static void main(String[] args) {
@@ -19,3 +19,4 @@ public class SpringbootApplication implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("home");
     }
 }
+

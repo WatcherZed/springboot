@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>getNum complex typeµÄ Java Àà¡£
+ * <p>getNum complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="getNum">
@@ -37,7 +37,7 @@ public class GetNum {
     protected int arg1;
 
     /**
-     * »ñÈ¡arg0ÊôĞÔµÄÖµ¡£
+     * è·å–arg0å±æ€§çš„å€¼ã€‚
      * 
      */
     public int getArg0() {
@@ -45,7 +45,7 @@ public class GetNum {
     }
 
     /**
-     * ÉèÖÃarg0ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®arg0å±æ€§çš„å€¼ã€‚
      * 
      */
     public void setArg0(int value) {
@@ -53,7 +53,7 @@ public class GetNum {
     }
 
     /**
-     * »ñÈ¡arg1ÊôĞÔµÄÖµ¡£
+     * è·å–arg1å±æ€§çš„å€¼ã€‚
      * 
      */
     public int getArg1() {
@@ -61,7 +61,7 @@ public class GetNum {
     }
 
     /**
-     * ÉèÖÃarg1ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®arg1å±æ€§çš„å€¼ã€‚
      * 
      */
     public void setArg1(int value) {

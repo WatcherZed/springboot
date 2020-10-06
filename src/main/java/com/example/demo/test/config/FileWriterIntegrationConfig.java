@@ -41,14 +41,14 @@ public class FileWriterIntegrationConfig {
     }
 
     //使用SpringIntegration的DSL配置
-    @Bean
-    public IntegrationFlow fileWriterFlow() {
-        return IntegrationFlows.from(MessageChannels.direct("textInChannel"))
-                .<String, String>transform(t -> t.toUpperCase())
-                .handle(Files.outboundAdapter("/com/example/demo/test/sia5/files")
-                        .fileExistsMode(FileExistsMode.APPEND)
-                        .appendNewLine(true)).get();
-    }
+//    @Bean
+//    public IntegrationFlow fileWriterFlow() {
+//        return IntegrationFlows.from(MessageChannels.direct("textInChannel"))
+//                .<String, String>transform(t -> t.toUpperCase())
+//                .handle(Files.outboundAdapter("/com/example/demo/test/sia5/files")
+//                        .fileExistsMode(FileExistsMode.APPEND)
+//                        .appendNewLine(true)).get();
+//    }
 
     //自定义通道
     @Bean
